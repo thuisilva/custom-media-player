@@ -15,7 +15,7 @@ SETUP GUIDE
 14. Copy the created API key
 15. Clone the repo using: 
 
-git clone https://github.com/thuisilva/custom-media-player.git
+git clone https://github.com/iliketheinternet223/custom-media-player.git
 cd custom-media-player
 
 16. Run Main.py, it should create an empty .env file on the root folder(where it was installed)
