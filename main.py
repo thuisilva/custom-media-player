@@ -116,10 +116,10 @@ def convert(playlist_id, single, single_video_id):
         print(f"Conversion to mp3 completed successfully.")
     else:
         title = yAPI.videos().list(part="snippet,contentDetails",id=single_video_id).execute()["items"][0]["snippet"]["title"]
-        for file in os.listdir(f"data/songs/"):
+        for file in os.listdir(f"data/single_media/"):
             if file.startswith(title) and (file.endswith(".mp4") or file.endswith(".webm")):
-                input_path = f"data/songs/{file}"
-                output_path = f"data/songs/{os.path.splitext(file)[0]}.mp3"
+                input_path = f"data/single_media/{file}"
+                output_path = f"data/single_media/{os.path.splitext(file)[0]}.mp3"
                 AudioFileClip(input_path).write_audiofile(output_path, codec='mp3', verbose=False, logger=None)
                 os.remove(input_path)
         print(f"Conversion to mp3 completed successfully.")
