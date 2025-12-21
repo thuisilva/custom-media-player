@@ -23,7 +23,7 @@ for module in REQUIRED_MODULES:
             os.system("pip install -r requirements.txt")
             break
         else:
-            i=input("Do you want to exit y/n > ").lower
+            i=input("Do you want to exit y/n > ").lower()
             if i == "y":
                 sys.exit("Please install the required modules and try again.")
             elif i == "n":
@@ -187,7 +187,7 @@ while True:
         if mode == "s":
             random.shuffle(files)
         else:
-            continue
+            pass
         if ptype == "m":
             for file in files:
                 video_id = file.split(".")[0]
@@ -392,7 +392,7 @@ while True:
             elif ftype == "s":
                 print(f"Now playing: {sname}")
                 pygame.mixer.init()
-                pygame.mixer.music.load(f"data/songs/{sname}")
+                pygame.mixer.music.load(f"data/single_media/{sname}")
                 pygame.mixer.music.play()
                 print("Press 's' to stop playback, 'p' to pause: ")
                 while pygame.mixer.music.get_busy():
